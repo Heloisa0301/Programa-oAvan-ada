@@ -14,7 +14,7 @@ public class Main {
 
         switch (op){
             case 1:
-                type = "email";
+                type = "email"; //o tipo vai ser passado por parametro, para a fabrica
                 break;
 
             case 2:
@@ -35,7 +35,7 @@ public class Main {
         System.out.println("Digite a mensagem: ");
         String message = scanner.nextLine();
 
-        Notification notification = NotificationFactory.createNotification(type);
-        notification.send(message);
+        Notification notification = NotificationFactory.createNotification(type);//redirecionando para a classe fabrica instanciar 
+        notification.send(message);//a instancia foi feita corretamente e consegue executar seus metodos 
     }
 }
