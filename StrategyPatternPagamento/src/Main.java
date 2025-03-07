@@ -14,11 +14,10 @@ public class Main {
         System.out.println("3: Boleto");
         int op = scanner.nextInt();
 
-        switch (op){
+        switch (op){                             
             case 1:
-                paymentStrategy = new PixPayment(); //aqui, o PaymentStrategy recebe cada um dos meios de pagamento
-                break;                              //isso permite uma padronização nas estratégias de pagamento e
-                                                    //simplifica a adição de qualquer coisa futuramente.
+                paymentStrategy = new PixPayment(); //recebe os meios de pagamento e permite padronizar no estrategy caso precise no futuro adicionar algo
+                break;                              
             case 2:
                 paymentStrategy = new CreditCardPayment();
                 break;
@@ -31,8 +30,8 @@ public class Main {
                 System.out.println("Opção inválida.");
                 return;
         }
-
+                                    
         PaymentProcessor paymentProcessor = new PaymentProcessor(paymentStrategy);
-        paymentProcessor.executePayment(amount);  //ao em vez de executar o processamento do pagamento em cada case do switch
-    }                                             //a execução é realizada uma vez só, por aqui. Economizando não só linhas de código
-}                                                 //mas também vários fios de cabelo do programador. Tudo isso graças as duas simples classes adicionadas.
+        paymentProcessor.executePayment(amount);  //ao compilar o processo de pagamento em uma estrutura de opções, ela é executada uma vez só por aqui 
+    }                                             
+}                                                
