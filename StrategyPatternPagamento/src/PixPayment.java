@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class PixPayment implements PaymentStrategy{
     private int geradorCodigoPix(){
-        return new Random().nextInt(1000000000); //Gera um código númerico aleatório como código PIX (não consegui incluir letras)
+        return new Random().nextInt(50000000); //Gera um código númerico aleatório como código PIX (não consegui incluir letras)
     }
 
     @Override
