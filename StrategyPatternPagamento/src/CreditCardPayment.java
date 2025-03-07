@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CreditCardPayment implements PaymentStrategy{ //classe simples, sem muitas máscaras ou restrições para digitação...
+public class CreditCardPayment implements PaymentStrategy{ 
     private Scanner scanner = new Scanner(System.in);
 
     @Override
