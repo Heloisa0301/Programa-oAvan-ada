@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class BoletoPayment implements PaymentStrategy{ //funciona praticamente de mesma maneira que o PixPayment
+public class BoletoPayment implements PaymentStrategy{ 
     private int geradorCodigoBoleto(){
         return new Random().nextInt(1000000000);
     }
