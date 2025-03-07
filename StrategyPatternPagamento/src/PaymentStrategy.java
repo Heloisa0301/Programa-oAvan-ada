@@ -1,5 +1,3 @@
 public interface PaymentStrategy {
-    void processPayment(double amount); //facilita a manutenção do código, apesar de no momento ser uma classe bem vazia,
-                                        //em casos de evolução e expansão do software, novos meios de pagamento só precisam reutilizar
-                                        //essa interface sem fortes modificações no código existente
+    void processPayment(double amount); //Ajuda a manter o código porque mesmo sendo uma classe simples agora no futuro novos meios de pagamento podem usar essa interface com poucas mudanças
 }
