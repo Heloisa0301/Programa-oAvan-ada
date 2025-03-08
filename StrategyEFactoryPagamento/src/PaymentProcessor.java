@@ -1,5 +1,5 @@
-public class PaymentProcessor {              //classe que executa o pagamento sem precisar chamá-lo diretamente
-    private PaymentStrategy paymentStrategy; //facilita a manutenção geral do código  pois substitui as classes concretas na chamada
+public class PaymentProcessor {              //executa o pagamento sem chamar diretamente 
+    private PaymentStrategy paymentStrategy; //substitui as classe concretas quando chamadas facilitando a manutenção geral do código
 
     public PaymentProcessor (PaymentStrategy paymentStrategy){
         this.paymentStrategy = paymentStrategy;
