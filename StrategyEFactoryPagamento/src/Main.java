@@ -14,9 +14,9 @@ public class Main {
         System.out.println("3: Boleto");
         int op = scanner.nextInt();
 
-        switch(op){
+        switch(op){     
             case 1:
-                type = "pix"; //variavel que recebe o tipo como string para criação da mesma na classe factory
+                type = "pix"; //Uma variável que armazena o nome do tipo como texto para criar a instância correspondente na classe factory.
                 break;
 
             case 2:
@@ -29,7 +29,7 @@ public class Main {
 
         }
 
-        PaymentStrategy paymentMethod = PaymentFactory.createPayment(type); //passando as informações para a criação da instância
+        PaymentStrategy paymentMethod = PaymentFactory.createPayment(type); //passando os dados para a criação da instância
         PaymentProcessor processor = new PaymentProcessor(paymentMethod);
         processor.executePayment(amount); //execução do pagamento pelo método da instancia criada
 
