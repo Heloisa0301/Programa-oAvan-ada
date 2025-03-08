@@ -1,11 +1,11 @@
 public class PaymentFactory {
-    public static PaymentStrategy createPayment(String type){ //instancia as classes dinamiicamente nessa classe
-        switch (type){                                        //isso tira a necessidade de especificar as classes
-            case "pix":                                       //diretamente e torna a chamada mais simples. Principalmente
-                return new PixPayment();                      //quando existem várias classes a serem chamadas
-
+    public static PaymentStrategy createPayment(String type){ //Crie instâncias das classes de maneira automática dentro desta classe. Isso elimina a necessidade de especificar os nomes das classes diretamente e facilita a chamada, especialmente quando há várias classes para utilizar.
+        switch (type){                                        
+            case "pix":                                       
+                return new PixPayment();                      
+                
             case "boleto":
-                return new BoletoPayment(); //instâncias sendo criadas conforme as necessidades...
+                return new BoletoPayment(); //cria as instancias conforme a necessidade
 
             case "cartao":
                 return new CreditCardPayment();
