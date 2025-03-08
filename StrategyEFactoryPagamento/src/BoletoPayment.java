@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class BoletoPayment implements PaymentStrategy{
     private int gerarBoleto(){
-        return new Random().nextInt(1000000000);
+        return new Random().nextInt(50000000);
     }
 
     @Override
